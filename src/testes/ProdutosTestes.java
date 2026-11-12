@@ -25,6 +25,15 @@ public class ProdutosTestes {
 
     }
     @Test
+    public void testarCadastrdo(){
+        Produto produtoA = new Produto(8, "Produto A", 85, 8);
+        sistema.cadastrar(produtoA);
+
+        assertEquals(1, sistema.getProdutos().size());
+        assertEquals("Produto A", sistema.getProdutos().getFirst().getNome());
+
+    }
+    @Test
     public void listar(){
 
     }
